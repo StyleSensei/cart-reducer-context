@@ -1,7 +1,9 @@
 import { Item } from "../models/Item"
 import { ActionType } from "../enums/ActionType"
 import { IAction } from "../models/IAction"
-import { useCart, useCartDispatch } from "../contexts/CartContext"
+import { useCart,  } from "../contexts/CartContext"
+import { useCartDispatch } from "../contexts/CartDispatchContext"
+import { Cart } from "./Cart"
 
 
 export const ShopPage = () => {
@@ -49,6 +51,10 @@ const dispatch = useCartDispatch()
           ))}
         </ul>
       </div>
+
+      <h2>
+        <Cart></Cart>
+      </h2>
     </>
   )
 }

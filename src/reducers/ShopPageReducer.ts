@@ -1,6 +1,6 @@
-import { ActionType } from "../enums/ActionType";
-import { IAction } from "../models/IAction";
-import { Item } from "../models/Item";
+// import { ActionType } from "../enums/ActionType";
+// import { IAction } from "../models/IAction";
+// import { Item } from "../models/Item";
 
 // export const ShopPageReducer = (items: Item[], action: IAction): Item[] =>{
 //     switch (action.type){

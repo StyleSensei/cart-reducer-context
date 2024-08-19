@@ -1,16 +1,12 @@
 import "./App.css";
-import { Cart } from "./components/Cart";
-import { ShopPage } from "./components/ShopPage";
-import { CartProvder } from "./components/CartProvider";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router";
 
 
 function App() {
 
   return (
-    <CartProvder>
-      <ShopPage></ShopPage>
-      <Cart></Cart>
-    </CartProvder>
+   <RouterProvider router={router}></RouterProvider>
   );
 }
 

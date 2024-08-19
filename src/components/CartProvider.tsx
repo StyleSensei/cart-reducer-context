@@ -1,8 +1,13 @@
 import { useReducer, useEffect } from "react"
 import { CartReducer } from "../reducers/CartReducer"
-import { CartContext, CartDispatchContext } from "../contexts/CartContext"
+import { CartContext } from "../contexts/CartContext"
+import { CartDispatchContext } from "../contexts/CartDispatchContext"
 
-export const CartProvder = ({ children }) => {
+interface ICardProviderProps{
+    children: JSX.Element | JSX.Element[]
+}
+
+export const CartProvder = ({ children }:ICardProviderProps) => {
 
     const [cart, dispatch] = useReducer(CartReducer,
         JSON.parse(localStorage.getItem('cart') || '[]')

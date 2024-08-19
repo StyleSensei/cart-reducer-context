@@ -1,7 +1,8 @@
 import { Item } from "../models/Item";
 import { ItemPresentation } from "./ItemPresentation";
 import { ActionType } from "../enums/ActionType";
-import {  useCart, useCartDispatch } from "../contexts/CartContext";
+import {  useCart } from "../contexts/CartContext";
+import { useCartDispatch } from "../contexts/CartDispatchContext";
 
 
 export const Cart = () => {
