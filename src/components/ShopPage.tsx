@@ -4,12 +4,14 @@ import { IAction } from "../models/IAction"
 import { useCart,  } from "../contexts/CartContext"
 import { useCartDispatch } from "../contexts/CartDispatchContext"
 import { Cart } from "./Cart"
+import { useTheme } from "../contexts/ThemeContext"
 
 
 export const ShopPage = () => {
 
 const cart = useCart()
 const dispatch = useCartDispatch()
+const theme = useTheme()
 
   const items: Item[] = [
     new Item("Banan"),
@@ -40,6 +42,15 @@ const dispatch = useCartDispatch()
 
   return (
     <>
+    <section 
+    style={{
+      fontFamily: theme.fontfamily,
+      fontSize: theme.fontSize,
+      color: theme.color,
+      backgroundColor:theme.backgroundcolor
+      
+    }}>
+
       <h2>List</h2>
       <div className="list-container">
         <ul>
@@ -55,6 +66,7 @@ const dispatch = useCartDispatch()
       <h2>
         <Cart></Cart>
       </h2>
+          </section>
     </>
   )
 }
